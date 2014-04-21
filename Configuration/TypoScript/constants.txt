@@ -1,0 +1,6 @@
+plugin.tx_qbbootstrap {
+	settings {
+		# cat=plugin.tx_qbbootstrap/file; type=string; label=CSS style sheet file for the accordion
+		accordionCSS = EXT:qbbootstrap/Resources/Public/StyleSheet/accordion.css
+	}
+}

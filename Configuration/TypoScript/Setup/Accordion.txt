@@ -1,0 +1,23 @@
+tt_content.gridelements_pi1.20.10.setup {
+  # ID of the gridelement
+  qbbootstrap_accordion < lib.gridelements.defaultGridSetup
+  qbbootstrap_accordion {
+    wrap = <div class="accordion">|</div>
+
+    # Modify the tt_content of the children
+    columns.default.renderObj.20 {
+      stdWrap.innerWrap {
+        cObject >
+        cObject = TEXT
+        cObject.value = <div class="accordion-element">|</div>
+      }
+      # Gridelements hides the stdheader by default
+      # We want it for CHILDREN! (so gridelements used as accordion element)
+      gridelements_pi1.10 =< lib.stdheader
+    }
+  }
+}
+
+# Include the css and js in the page setup
+page.includeJSFooter.qbbootstrap_accordion = EXT:qbbootstrap/Resources/Public/JavaScript/accordion.js
+page.includeCSS.qbbootstrap_accordion = {$plugin.tx_qbbootstrap.settings.accordionCSS}

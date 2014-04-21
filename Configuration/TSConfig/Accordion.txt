@@ -1,0 +1,22 @@
+tx_gridelements.setup.qbbootstrap_accordion {
+	title = Accordion
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/accordion.png
+
+	config {
+		colCount = 1
+		rowCount = 1
+
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Accordion
+						colPos = 0
+						allowed = text,textpic,gridelements_pi1
+					}
+				}
+			}
+		}
+	}
+}
