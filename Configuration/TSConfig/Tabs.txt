@@ -2,6 +2,7 @@
 tx_gridelements.setup.qbbootstrap_tabs_container {
 	title = Tabs Container
 	description = Ein Element das mehrere Tabs enthält
+	icon = EXT:qbbootstrap/Resources/Public/Icons/tabs.png
 	flexformDS = FILE:EXT:qbbootstrap/Configuration/FlexForms/Tabs.xml
 
 	config {
