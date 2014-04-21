@@ -1,0 +1,23 @@
+# Tabs Container
+tx_gridelements.setup.qbbootstrap_tabs_container {
+	title = Tabs Container
+	description = Ein Element das mehrere Tabs enthält
+	flexformDS = FILE:EXT:qbbootstrap/Configuration/FlexForms/Tabs.xml
+
+	config {
+		colCount = 1
+		rowCount = 1
+
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Tabs Container
+						colPos = 0
+						#allowed = gridelements_pi1
+					}
+				}
+			}
+		}
+	}
+}

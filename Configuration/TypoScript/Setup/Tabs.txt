@@ -1,0 +1,59 @@
+# Define the Tab Container
+tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container {
+	# Render navigation using fluid
+	cObject = FLUIDTEMPLATE
+	cObject {
+		file = EXT:qbbootstrap/Resources/Private/Partials/Tabs.html
+	}
+
+	# Add the renderObj of the tab directly, this prevents the "csc-default"-wrap
+	columns.0 {
+		renderObj < tt_content
+		renderObj.stdWrap {
+			preCObject = COA
+			preCObject.10 = TEXT
+			preCObject.10.value = <div id="tab-content-{field:uid}" class="tab-pane {field:parentgrid_flexform_switch_effect}
+			preCObject.10.stdWrap.insertData = 1
+
+			preCObject.20 = TEXT
+			preCObject.20.value = active in
+			preCObject.20.stdWrap.noTrimWrap = | ||
+			preCObject.20.if {
+				value = 1
+				equals.data = cObj:parentRecordNumber
+				equals.prioriCalc = 1
+			}
+
+			preCObject.30 = TEXT
+			preCObject.30.value = ">
+
+			postCObject = TEXT
+			postCObject.value = </div>
+		}
+
+		renderObj {
+			# Disable header code for all known content types.
+			# We render the heade seperately as tab title.
+			# Values observed with the following command:
+			#   sed -n '/^tt_content..*= COA/s/^tt_content\.\(.*\) = COA/\1.10 >/p' \
+			#	./typo3/sysext/css_styled_content/static/setup.txt
+			header.10 >
+			text.10 >
+			image.10 >
+			textpic.10 >
+			bullets.10 >
+			uploads.10 >
+			table.10 >
+			multimedia.10 >
+			swfobject.10 >
+			qtobject.10 >
+			media.10 >
+			mailform.10 >
+			search.10 >
+			menu.10 >
+			shortcut.10 >
+			list.10 >
+			# TODO: Add extension content types here
+		}
+	}
+}
