@@ -1,0 +1,78 @@
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Libs/01-counter.txt">
+
+lib.carousel = COA
+lib.carousel {
+	# LOAD_REGISTER assignment just for reference (also done by resetCounter)
+	3 = LOAD_REGISTER
+	3 < lib.resetCounter
+	3 {
+		carouselID.cObject = TEXT
+		carouselID.cObject.value {
+			insertData = 1
+			field = uid
+			wrap = carousel-|
+		}
+	}
+
+	20 < tt_content.image.20.default.imgList.cObject
+	20 {
+		renderObj >
+		renderObj = COA
+		renderObj.1 < lib.counterIncrease
+
+		renderObj.20 = FLUIDTEMPLATE
+		renderObj.20 {
+			file = EXT:qbbootstrap/Resources/Private/Partials/CarouselImage.html
+			variables {
+				# http://docs.typo3.org/typo3cms/TyposcriptReference/DataTypes/Gettext/Index.html#file
+				uid = TEXT
+				uid.data = file:current:uid
+				identifier = TEXT
+				identifier.data = file:current:identifier
+				size = TEXT
+				size.data = file:current:size
+				extension = TEXT
+				extension.data = file:current:extension
+				#contents = TEXT
+				#contents.data = file:current:contents
+
+				title = TEXT
+				title.data = file:current:title
+				description = TEXT
+				description.data = file:current:description
+				link = TEXT
+				link.data = file:current:link
+				alternative = TEXT
+				alternative.data = file:current:alternative
+				publicUrl = TEXT
+				publicUrl.data = file:current:publicUrl
+
+				carouselId = TEXT
+				carouselId.data = register:carouselID
+
+				index = TEXT
+				index.data = register:counter
+			}
+		}
+
+		stdWrap.dataWrap = <div id="{register:carouselID}" class="carousel slide" data-interval="false">|</div>
+		stdWrap.stdWrap.innerWrap = <div class="carousel-inner">|</div>
+		stdWrap.stdWrap.append = TEXT
+		stdWrap.stdWrap.append.stdWrap.dataWrap (
+			<a class="left carousel-control" href="#{register:carouselID}" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#{register:carouselID}" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		)
+	}
+	98 = RESTORE_REGISTER
+}
+
+# Override the Carousel identifier in the wrapped tt_content.image
+# Note!: This depends on the wrapping in 01-ttcontent-image-wrap.txt
+# Carousel has section_frame = 2000
+
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Libs/01-ttcontent-image-wrap.txt">
+tt_content.image.20.2000 < lib.carousel

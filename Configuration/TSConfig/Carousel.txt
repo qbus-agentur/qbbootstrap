@@ -1,0 +1,1 @@
+TCEFORM.tt_content.section_frame.addItems.2000 = Carousel

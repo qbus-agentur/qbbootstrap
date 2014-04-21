@@ -1,0 +1,13 @@
+<div class="item{f:if(condition: '{index} == 1', then: ' active')}">
+	<f:image src="{publicUrl}" alt="{alternative}" title="{title}" />
+	<f:if condition="{description}">
+		<div class="carousel-caption">
+			<p>{description}</p>
+		</div>
+	</f:if>
+</div>
+
+<f:comment>
+<f:debug>{all}</f:debug>
+</f:comment>
+

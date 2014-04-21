@@ -5,3 +5,4 @@
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/Container-33-33-33.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/Container-33-66.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/Container-66-33.txt">
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/Carousel.txt">
