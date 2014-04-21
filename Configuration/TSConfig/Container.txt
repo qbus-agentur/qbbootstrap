@@ -1,0 +1,20 @@
+tx_gridelements.setup.qbbootstrap_container {
+	title = Container
+	description = Verwendbar als Rahmen oder als Wrapper für Elemente in Accordions oder Tab-Rastern.
+	icon = EXT:qbbootstrap/Resources/Public/Icons/container.png
+
+	config {
+		colCount = 1
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Container
+						colPos = 0
+					}
+				}
+			}
+		}
+	}
+}

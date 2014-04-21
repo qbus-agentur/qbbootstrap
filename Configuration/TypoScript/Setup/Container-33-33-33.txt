@@ -1,0 +1,19 @@
+# three rows 33|33|33
+tt_content.gridelements_pi1.20.10.setup {
+  qbbootstrap_container_33_33_33 < lib.gridelements.defaultGridSetup
+  qbbootstrap_container_33_33_33 {
+    columns {
+      # colPos ID
+      1 < .default
+      1.wrap = <div class="col-md-4">|</div>
+      # colPos ID
+      0 < .default
+      0.wrap = <div class="col-md-4">|</div>
+      # colPos ID
+      2 < .default
+      2.wrap = <div class="col-md-4">|</div>
+    }
+     # bootsrap row wrap
+    wrap = <div class="row">|</div>
+  }
+}

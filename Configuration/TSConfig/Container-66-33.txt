@@ -1,0 +1,25 @@
+tx_gridelements.setup.qbbootstrap_container_66_33 {
+	title = Zweispaltig 66:33
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/66-33.png
+
+	config {
+		colCount = 3
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Links
+						colPos = 1
+						colspan = 2
+					}
+					2 {
+						name = Rechts
+						colPos = 2
+					}
+				}
+			}
+		}
+	}
+}

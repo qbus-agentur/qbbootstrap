@@ -1,0 +1,16 @@
+# two rows 50|50
+tt_content.gridelements_pi1.20.10.setup {
+  qbbootstrap_container_50_50 < lib.gridelements.defaultGridSetup
+  qbbootstrap_container_50_50 {
+    columns {
+      # colPos ID
+      1 < .default
+      1.wrap = <div class="col-md-6">|</div>
+      # colPos ID
+      2 < .default
+      2.wrap = <div class="col-md-6">|</div>
+    }
+    # bootsrap row wrap
+    wrap = <div class="row">|</div>
+  }
+}

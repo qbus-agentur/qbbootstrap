@@ -1,0 +1,24 @@
+tx_gridelements.setup.qbbootstrap_container_50_50 {
+	title = Zweispaltig 50:50
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/50-50.png
+
+	config {
+		colCount = 2
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Links
+						colPos = 1
+					}
+					2 {
+						name = Rechts
+						colPos = 2
+					}
+				}
+			}
+		}
+	}
+}

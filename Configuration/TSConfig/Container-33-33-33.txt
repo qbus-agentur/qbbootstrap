@@ -1,0 +1,28 @@
+tx_gridelements.setup.qbbootstrap_container_33_33_33 {
+	title = Dreispaltig 33:33:33
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/33-33-33.png
+
+	config {
+		colCount = 3
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Links
+						colPos = 1
+					}
+					2 {
+						name = Mitte
+						colPos = 0
+					}
+					3 {
+						name = Rechts
+						colPos = 2
+					}
+				}
+			}
+		}
+	}
+}
