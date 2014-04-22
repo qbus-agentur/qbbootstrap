@@ -1,4 +1,5 @@
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Libs/01-counter.txt">
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Libs/01-ttcontent-image-wrap.txt">
 
 lib.carousel = COA
 lib.carousel {
@@ -74,5 +75,4 @@ lib.carousel {
 # Note!: This depends on the wrapping in 01-ttcontent-image-wrap.txt
 # Carousel has section_frame = 2000
 
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Libs/01-ttcontent-image-wrap.txt">
 tt_content.image.20.2000 < lib.carousel
