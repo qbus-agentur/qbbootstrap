@@ -8,8 +8,11 @@ tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container {
 
 	# Add the renderObj of the tab directly, this prevents the "csc-default"-wrap
 	columns.0 {
-		renderObj < tt_content
+		renderObj = CASE
+		renderObj.key.field = CType
 		renderObj.stdWrap {
+			innerWrap.cObject =< tt_content.stdWrap.innerWrap.cObject
+
 			preCObject = COA
 			preCObject.10 = TEXT
 			preCObject.10.value = <div id="tab-content-{field:uid}" class="tab-pane {field:parentgrid_flexform_switch_effect}
@@ -32,27 +35,48 @@ tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container {
 		}
 
 		renderObj {
+			stdWrap =< tt_content.stdWrap
+			
 			# Disable header code for all known content types.
 			# We render the heade seperately as tab title.
 			# Values observed with the following command:
 			#   sed -n '/^tt_content..*= COA/s/^tt_content\.\(.*\) = COA/\1.10 >/p' \
 			#	./typo3/sysext/css_styled_content/static/setup.txt
-			header.10 >
-			text.10 >
-			image.10 >
-			textpic.10 >
-			bullets.10 >
-			uploads.10 >
-			table.10 >
-			multimedia.10 >
-			swfobject.10 >
-			qtobject.10 >
-			media.10 >
-			mailform.10 >
-			search.10 >
-			menu.10 >
-			shortcut.10 >
-			list.10 >
+			header = COA
+			header.20 =< tt_content.header.20
+			text = COA
+			text.20 =< tt_content.text.20
+			image = COA
+			image.20 =< tt_content.image.20
+			textpic = COA
+			textpic.20 =< tt_content.textpic.20
+			bullets = COA
+			bullets.20 =< tt_content.bullets.20
+			uploads = COA
+			uploads.20 =< tt_content.uploads.20
+			table = COA
+			table.20 =< tt_content.table.20
+			multimedia = COA
+			multimedia.20 =< tt_content.multimedia.20
+			swfobject = COA
+			swfobject.20 =< tt_content.swfobject.20
+			qtobject = COA
+			qtobject.20 =< tt_content.qtobject.20
+			media = COA
+			media.20 =< tt_content.media.20
+			mailform = COA
+			mailform.20 =< tt_content.mailform.20
+			search = COA
+			search.20 =< tt_content.search.20
+			menu = COA
+			menu.20 =< tt_content.menu.20
+			shortcut = COA
+			shortcut.20 =< tt_content.shortcut.20
+			list = COA
+			list.20 =< tt_content.list.20
+			gridelements_pi1 = COA
+			gridelements_pi1.20 =< tt_content.gridelements_pi1.20
+			
 			# TODO: Add extension content types here
 		}
 	}
