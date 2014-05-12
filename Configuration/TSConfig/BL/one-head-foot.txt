@@ -1,0 +1,39 @@
+tx_qbbootstrap.backend_layout.one_head_foot {
+	title = Einspaltig mit Kopf und Fuß
+	icon = EXT:qbbootstrap/Resources/Public/Icons/one-head-foot.png
+	config {
+		colCount = 1
+		rowCount = 4
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Kopf
+						colPos = 5
+					}
+				}
+			}
+			2 {
+				columns {
+					1 {
+						name = Normal
+						rowspan = 2
+						colPos = 0
+					}
+				}
+			}
+			3 {
+				columns {
+				}
+			}
+			4 {
+				columns {
+					1 {
+						name = Fuß
+						colPos = 4
+					}
+				}
+			}
+		}
+	}
+}

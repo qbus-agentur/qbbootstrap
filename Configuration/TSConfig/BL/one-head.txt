@@ -1,0 +1,35 @@
+tx_qbbootstrap.backend_layout.one_head {
+	title = Einspaltig mit Kopf
+	icon = EXT:qbbootstrap/Resources/Public/Icons/one-head.png
+	config {
+		colCount = 1
+		rowCount = 4
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Kopf
+						colPos = 5
+					}
+				}
+			}
+			2 {
+				columns {
+					1 {
+						name = Normal
+						rowspan = 3
+						colPos = 0
+					}
+				}
+			}
+			3 {
+				columns {
+				}
+			}
+			4 {
+				columns {
+				}
+			}
+		}
+	}
+}

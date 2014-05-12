@@ -1,0 +1,47 @@
+tx_qbbootstrap.backend_layout.mid_right_head_foot {
+	title = Zweispaltig (mitte|rechts) mit Kopf und Fuß
+	icon = EXT:qbbootstrap/Resources/Public/Icons/mid-right-head-foot.png
+	config {
+		colCount = 4
+		rowCount = 4
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Kopf
+						colspan = 4
+						colPos = 5
+
+					}
+				}
+			}
+			2 {
+				columns {
+					1 {
+						name = Normal
+						colspan = 3
+						rowspan = 2
+						colPos = 0
+					}
+					2 {
+						name = Rechts
+						colPos = 2
+					}
+				}
+			}
+			3 {
+				columns {
+				}
+			}
+			4 {
+				columns {
+					1 {
+						name = Fuß
+						colspan = 4
+						colPos = 4
+					}
+				}
+			}
+		}
+	}
+}

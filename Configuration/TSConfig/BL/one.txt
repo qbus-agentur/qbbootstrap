@@ -1,0 +1,18 @@
+tx_qbbootstrap.backend_layout.one {
+	title = Einspaltig
+	icon = EXT:qbbootstrap/Resources/Public/Icons/one.png
+	config {
+		colCount = 1
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Mite
+						colPos = 0
+					}
+				}
+			}
+		}
+	}
+}
