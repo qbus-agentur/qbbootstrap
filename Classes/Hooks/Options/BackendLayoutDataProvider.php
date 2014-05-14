@@ -76,11 +76,11 @@ class BackendLayoutDataProvider implements \TYPO3\CMS\Backend\View\BackendLayout
 	/**
 	 * Creates a new backend layout using the given record data.
 	 *
-	 * @param string $key
+	 * @param string $id
 	 * @param array $data
 	 * @return BackendLayout
 	 */
-	protected function createBackendLayout(string $id, array $layout)
+	protected function createBackendLayout($id, $layout)
 	{
 		$layout['uid'] = $id;
 
