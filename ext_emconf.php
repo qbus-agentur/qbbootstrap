@@ -34,6 +34,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluid' => '6.0',
 			'typo3' => '6.0',
 			'gridelements' => '2.0',
+			'qbtools' => '1.2.0',
 		),
 		'conflicts' => array(
 		),

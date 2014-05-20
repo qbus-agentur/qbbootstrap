@@ -1,4 +1,4 @@
-tx_qbbootstrap.backend_layout.mid_right_head_foot {
+tx_qbtools.backend_layout.mid_right_head_foot {
 	title = Zweispaltig (mitte|rechts) mit Kopf und Fuß
 	icon = EXT:qbbootstrap/Resources/Public/Icons/mid-right-head-foot.png
 	config {

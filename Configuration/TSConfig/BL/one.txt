@@ -1,4 +1,4 @@
-tx_qbbootstrap.backend_layout.one {
+tx_qbtools.backend_layout.one {
 	title = Einspaltig
 	icon = EXT:qbbootstrap/Resources/Public/Icons/one.png
 	config {

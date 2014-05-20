@@ -1,4 +1,4 @@
-tx_qbbootstrap.backend_layout.mid_right_head {
+tx_qbtools.backend_layout.mid_right_head {
 	title = Zweispaltig (mitte|rechts) mit Kopf
 	icon = EXT:qbbootstrap/Resources/Public/Icons/mid-right-head.png
 	config {

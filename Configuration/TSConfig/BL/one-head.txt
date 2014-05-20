@@ -1,4 +1,4 @@
-tx_qbbootstrap.backend_layout.one_head {
+tx_qbtools.backend_layout.one_head {
 	title = Einspaltig mit Kopf
 	icon = EXT:qbbootstrap/Resources/Public/Icons/one-head.png
 	config {
