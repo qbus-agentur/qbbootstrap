@@ -1,23 +1,46 @@
+# Hide the default libstdheader for elements that are direct children of an
+# accordion
+lib.stdheader.stdWrap.if.equals.override.if.value := addToList(qbbootstrap_accordion)
+
+# Definition of the Accordion
 tt_content.gridelements_pi1.20.10.setup {
-  # ID of the gridelement
-  qbbootstrap_accordion < lib.gridelements.defaultGridSetup
-  qbbootstrap_accordion {
-    wrap = <div class="accordion">|</div>
+	qbbootstrap_accordion < lib.gridelements.defaultGridSetup
+	qbbootstrap_accordion {
+		dataWrap = <div class="panel-group qbbootstrap-accordion" id="c{field:uid}">|</div>
 
-    # Modify the tt_content of the children
-    columns.default.renderObj.20 {
-      stdWrap.innerWrap {
-        cObject >
-        cObject = TEXT
-        cObject.value = <div class="accordion-element">|</div>
-      }
-      # Gridelements hides the stdheader by default
-      # We want it for CHILDREN! (so gridelements used as accordion element)
-      gridelements_pi1.10 =< lib.stdheader
-    }
-  }
+		columns.default.renderObj.20.stdWrap {
+			preCObject = COA
+			preCObject {
+				10 = TEXT
+				10.value = <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title">
+
+				20 = TEXT
+				20.value = <a id="#c{field:uid}" href="#c{field:uid}-body" data-toggle="collapse" data-parent="#c{field:parentgrid_uid}"
+				20.insertData = 1
+
+				22 < lib.get_is_active_gridelement
+				22.value = class="collapsed"
+				# Negate the if condition since collapsed
+				# should be set on all hidden control elements
+				22.if.negate = 1
+
+				30 = TEXT
+				30.value = >{field:header}</a></h4></div>
+				30.insertData = 1
+
+				40 = TEXT
+				40.value = <div id="c{field:uid}-body" class="panel-collapse collapse
+				40.insertData = 1
+				
+				50 < lib.get_is_active_gridelement
+				50.value = in
+				
+				60 = TEXT
+				60.value = "><div class="panel-body">
+			}
+
+			postCObject = TEXT
+			postCObject.value = </div></div></div>
+		}
+	}
 }
-
-# Include the css and js in the page setup
-page.includeJSFooter.qbbootstrap_accordion = EXT:qbbootstrap/Resources/Public/JavaScript/accordion.js
-page.includeCSS.qbbootstrap_accordion = {$plugin.tx_qbbootstrap.settings.accordionCSS}
