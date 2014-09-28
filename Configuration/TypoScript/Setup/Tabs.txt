@@ -1,4 +1,9 @@
-# Define the Tab Container
+# Hide the default libstdheader for elements that are direct children of
+# a tabs container
+lib.stdheader.stdWrap.if.equals.override.if.value := addToList(qbbootstrap_tabs_container)
+
+# Definition of the Tab Container
+tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container < lib.gridelements.defaultGridSetup
 tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container {
 	# Render navigation using fluid
 	cObject = FLUIDTEMPLATE
@@ -6,78 +11,23 @@ tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container {
 		file = EXT:qbbootstrap/Resources/Private/Partials/Tabs.html
 	}
 
-	# Add the renderObj of the tab directly, this prevents the "csc-default"-wrap
-	columns.0 {
-		renderObj = CASE
-		renderObj.key.field = CType
+	columns.default {
 		renderObj.stdWrap {
-			innerWrap.cObject =< tt_content.stdWrap.innerWrap.cObject
-
 			preCObject = COA
-			preCObject.10 = TEXT
-			preCObject.10.value = <div id="tab-content-{field:uid}" class="tab-pane {field:parentgrid_flexform_switch_effect}
-			preCObject.10.stdWrap.insertData = 1
+			preCObject {
+				10 = TEXT
+				10.value = <div id="tab-content-{field:uid}" class="tab-pane {field:parentgrid_flexform_switch_effect}
+				10.stdWrap.insertData = 1
 
-			preCObject.20 = TEXT
-			preCObject.20.value = active in
-			preCObject.20.stdWrap.noTrimWrap = | ||
-			preCObject.20.if {
-				value = 1
-				equals.data = cObj:parentRecordNumber
-				equals.prioriCalc = 1
+				20 < lib.get_is_active_gridelement
+				20.value = active in
+
+				30 = TEXT
+				30.value = ">
 			}
-
-			preCObject.30 = TEXT
-			preCObject.30.value = ">
 
 			postCObject = TEXT
 			postCObject.value = </div>
-		}
-
-		renderObj {
-			stdWrap =< tt_content.stdWrap
-			
-			# Disable header code for all known content types.
-			# We render the heade seperately as tab title.
-			# Values observed with the following command:
-			#   sed -n '/^tt_content..*= COA/s/^tt_content\.\(.*\) = COA/\1.10 >/p' \
-			#	./typo3/sysext/css_styled_content/static/setup.txt
-			header = COA
-			header.20 =< tt_content.header.20
-			text = COA
-			text.20 =< tt_content.text.20
-			image = COA
-			image.20 =< tt_content.image.20
-			textpic = COA
-			textpic.20 =< tt_content.textpic.20
-			bullets = COA
-			bullets.20 =< tt_content.bullets.20
-			uploads = COA
-			uploads.20 =< tt_content.uploads.20
-			table = COA
-			table.20 =< tt_content.table.20
-			multimedia = COA
-			multimedia.20 =< tt_content.multimedia.20
-			swfobject = COA
-			swfobject.20 =< tt_content.swfobject.20
-			qtobject = COA
-			qtobject.20 =< tt_content.qtobject.20
-			media = COA
-			media.20 =< tt_content.media.20
-			mailform = COA
-			mailform.20 =< tt_content.mailform.20
-			search = COA
-			search.20 =< tt_content.search.20
-			menu = COA
-			menu.20 =< tt_content.menu.20
-			shortcut = COA
-			shortcut.20 =< tt_content.shortcut.20
-			list = COA
-			list.20 =< tt_content.list.20
-			gridelements_pi1 = COA
-			gridelements_pi1.20 =< tt_content.gridelements_pi1.20
-			
-			# TODO: Add extension content types here
 		}
 	}
 }
