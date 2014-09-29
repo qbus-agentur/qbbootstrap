@@ -1,0 +1,32 @@
+tx_gridelements.setup.qbbootstrap_container_25_25_25_25 {
+	title = Vierspaltig 25:25:25:25
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/25-25-25-25.png
+
+	config {
+		colCount = 4
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Links
+						colPos = 0
+					}
+					2 {
+						name = Mitte Links
+						colPos = 1
+					}
+					3 {
+						name = Mitte Rechts
+						colPos = 2
+					}
+					4 {
+						name = Rechts
+						colPos = 3
+					}
+				}
+			}
+		}
+	}
+}
