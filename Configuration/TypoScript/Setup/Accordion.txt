@@ -31,10 +31,10 @@ tt_content.gridelements_pi1.20.10.setup {
 				40 = TEXT
 				40.value = <div id="c{field:uid}-body" class="panel-collapse collapse
 				40.insertData = 1
-				
+
 				50 < lib.get_is_active_gridelement
 				50.value = in
-				
+
 				60 = TEXT
 				60.value = "><div class="panel-body">
 			}
