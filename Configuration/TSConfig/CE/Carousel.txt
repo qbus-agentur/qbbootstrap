@@ -1,1 +1,24 @@
 TCEFORM.tt_content.section_frame.addItems.2000 = Carousel
+
+tx_gridelements.setup.qbbootstrap_carousel {
+	title = Carousel
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/carousel.png
+	flexformDS = FILE:EXT:qbbootstrap/Configuration/FlexForms/Carousel.xml
+
+	config {
+		colCount = 1
+		rowCount = 1
+
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Carousel
+						colPos = 0
+					}
+				}
+			}
+		}
+	}
+}

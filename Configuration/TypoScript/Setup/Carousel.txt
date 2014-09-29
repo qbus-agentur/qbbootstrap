@@ -1,0 +1,34 @@
+# Hide the default libstdheader for elements that are direct children of an
+# accordion
+lib.stdheader.stdWrap.if.equals.override.if.value := addToList(qbbootstrap_accordion)
+
+# Definition of the Accordion
+tt_content.gridelements_pi1.20.10.setup {
+	qbbootstrap_carousel < lib.gridelements.defaultGridSetup
+	qbbootstrap_carousel {
+		# Render carousel wrap and controls using fluid
+		cObject = FLUIDTEMPLATE
+		cObject {
+			file = EXT:qbbootstrap/Resources/Private/Partials/Carousel.html
+		}
+
+		columns.default {
+			renderObj.stdWrap {
+				preCObject = COA
+				preCObject {
+					10 = TEXT
+					10.value = <div class="item
+
+					20 < lib.get_is_active_gridelement
+					20.value = active
+
+					30 = TEXT
+					30.value = ">
+				}
+
+				postCObject = TEXT
+				postCObject.value = </div>
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+<div id="c{data.uid}" class="carousel slide" {f:if(condition: '{data.flexform_auto_animation}', then: ' data-ride="carousel"', else: 'data-interval="false"')}>
+
+	<f:if condition="{data.flexform_indicators}">
+		<ol class="carousel-indicators">
+			<f:for each="{data.tx_gridelements_view_children}" as="child" iteration="i">
+			<li data-target="#c{data.uid}" data-slide-to="{i.index}" data-interval="false"{f:if(condition: '{i.isFirst}', then: ' class="active"')}></li>
+			</f:for>
+		</ol>
+	</f:if>
+
+	<div class="carousel-inner">
+		<f:format.raw>{data.tx_gridelements_view_columns.0}</f:format.raw>
+	</div>
+
+	<f:if condition="{data.flexform_controls}">
+		<a class="left carousel-control" href="#c{data.uid}" role="button" data-slide="prev" data-interval="false">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#c{data.uid}" role="button" data-slide="next" data-interval="false">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</f:if>
+
+</div>
