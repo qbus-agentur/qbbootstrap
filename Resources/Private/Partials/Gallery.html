@@ -1,0 +1,71 @@
+{namespace qbtools=Qbus\Qbtools\ViewHelpers}
+
+<qbtools:fal object="{data.uid}" as="images">
+<f:alias map="{bounds: '{qbtools:calculateBounds(images: images)}'}">
+
+<div class="gallery">
+	<style scoped="scoped">
+		<f:comment>
+		/* The #carousel-%uid% is not necessary with <style scoped> but we still use it
+		 * in case the browser doesnt support the scoped attribute.
+		 * (Or in case we move it do the <head> section with a viewhelper at some time.)
+		 */
+		</f:comment>
+		#carousel-{data.uid}.carousel {
+			max-width:  calc({bounds.minRatioWidth}px * {bounds.minHeight} / {bounds.minRatioHeight});
+			margin: 0 auto;
+		}
+		#carousel-{data.uid} .carousel-inner {
+			width: 100%;
+			display: inline-block;
+			position: relative;
+			margin: 0;
+		}
+		#carousel-{data.uid} .carousel-inner:after {
+			<f:comment>
+			/* Responsive div ratio idea from:
+			 * http://stackoverflow.com/questions/12121090/responsively-change-div-size-keeping-aspect-ratio
+			 */
+			</f:comment>
+			padding-top: {bounds.minRatio -> f:format.number()}%;
+			display: block;
+			content: '';
+		}
+		#carousel-{data.uid} .carousel-inner .item  {
+			position: absolute;
+			top: 0; bottom: 0; /*fill parent*/
+			width: 100%;
+		}
+		#carousel-{data.uid} .carousel-inner .item a {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+		#carousel-{data.uid} .carousel-inner .item img  {
+			display: block;
+			max-height: 100%;
+			height: 100%;
+			width: auto;
+		}
+	</style>
+	<div id="carousel-{data.uid}" class="carousel slide" data-ride="carousel">
+		<div class="carousel-inner">
+			<f:for each="{images}" as="image" iteration="i">
+				<div class="item{f:if(condition:'{i.index} == 0',then:' active')}">
+					<a href="{f:uri.image(image: image)}"{f:if(condition: '{data.image_zoom}', then: ' class="fancybox" rel="rel-{data.uid}"')}>
+						<f:image image="{image}" maxHeight="{bounds.minHeight}" class="center-block" />
+					</a>
+				</div>
+			</f:for>
+		</div>
+		<a class="left carousel-control" href="#carousel-{data.uid}" role="button" data-slide="prev" data-interval="false">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#carousel-{data.uid}" role="button" data-slide="next" data-interval="false">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+</div>
+
+</f:alias>
+</qbtools:fal>

@@ -1,0 +1,15 @@
+mod.wizards.newContentElement.wizardItems.common {
+	elements {
+		qbbootstrap_gallery {
+			icon = ../typo3conf/ext/qbbootstrap/Resources/Public/Icons/carousel.png
+			title = Gallerie
+			description =
+			tt_content_defValues {
+				CType = qbbootstrap_gallery
+				image_zoom = 1
+			}
+		}
+	}
+	#show := addToList(qbbootstrap_gallery)
+	show := replaceString(image,|image,qbbootstrap_gallery,)
+}

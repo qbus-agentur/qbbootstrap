@@ -1,3 +1,4 @@
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Gallery.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Tabs.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Accordion.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Container.txt">

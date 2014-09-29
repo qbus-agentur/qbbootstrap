@@ -35,6 +35,7 @@ lib.get_is_active_gridelement {
 	}
 }
 
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Gallery.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Tabs.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Accordion.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Carousel.txt">
