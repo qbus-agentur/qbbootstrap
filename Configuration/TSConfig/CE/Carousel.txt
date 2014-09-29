@@ -1,5 +1,3 @@
-TCEFORM.tt_content.section_frame.addItems.2000 = Carousel
-
 tx_gridelements.setup.qbbootstrap_carousel {
 	title = Carousel
 	description =
