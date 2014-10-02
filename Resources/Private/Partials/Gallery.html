@@ -5,7 +5,7 @@
 
 <div class="qbbootstrap-gallery">
 	<div id="carousel-{data.uid}" class="carousel slide center-block" data-ride="carousel"
-		style="max-width: calc({bounds.minHeight}px / ({bounds.minRatio} / 100));">
+		style="max-width: {f:cObject(typoscriptObjectPath: 'lib.qbbootstrap.math', data: '{bounds.minHeight} / ({bounds.minRatio} / 100)')}px">
 
 		<div class="carousel-inner" style="position: absolute; top: 0; bottom: 0;">
 			<f:for each="{images}" as="image" iteration="i">
