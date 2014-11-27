@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile($_EXTKEY, 'Configuration/TypoScript', 'Qbus Bootstrap');
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content', 'CType', array(
-	'Gallerie',
+	'Galerie',
 	'qbbootstrap_gallery',
 	'i/tt_content_image.gif',
 ), 'textpic', 'after');
