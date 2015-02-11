@@ -15,7 +15,7 @@ tt_content.gridelements_pi1.20.10.setup {
 				10.value = <div class="panel panel-default"><div class="panel-heading"><h4 class="panel-title">
 
 				20 = TEXT
-				20.value = <a id="#c{field:uid}" href="#c{field:uid}-body" data-toggle="collapse" data-parent="#c{field:parentgrid_uid}"
+				20.value = <a id="c{field:uid}" href="#c{field:uid}-body" data-toggle="collapse" data-parent="#c{field:parentgrid_uid}"
 				20.insertData = 1
 
 				22 < lib.get_is_active_gridelement
