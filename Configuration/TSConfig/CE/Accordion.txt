@@ -2,6 +2,7 @@ tx_gridelements.setup.qbbootstrap_accordion {
 	title = Accordion
 	description =
 	icon = EXT:qbbootstrap/Resources/Public/Icons/accordion.png
+	flexformDS = FILE:EXT:qbbootstrap/Configuration/FlexForms/Accordion.xml
 
 	config {
 		colCount = 1
