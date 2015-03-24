@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3DataStructure>
-        <meta type="array">
-                <langDisable>1</langDisable>
-        </meta>
-        <sheets>
-                <general>
-                        <ROOT type="array">
-                                <TCEforms>
-                                        <sheetTitle>Einstellungen</sheetTitle>
-                                </TCEforms>
-                                <el type="array">
-                                        <expand_first type="array">
-                                                <TCEforms type="array">
-                                                        <label>Erstes Element stadardmäßig öffnen</label>
-                                                        <config type="array">
-                                                                <type>select</type>
-                                                                <items type="array">
-                                                                        <numIndex index="0" type="array"><numIndex index="0">Geschlossen</numIndex><numIndex     index="1">0</numIndex></numIndex>
-                                                                        <numIndex index="1" type="array"><numIndex index="0">Offen</numIndex><numIndex index    ="1">1</numIndex></numIndex>
-                                                                </items>
-                                                                <default>0</default>
-                                                        </config>
-                                                </TCEforms>
-                                        </expand_first>
-                                </el>
-                        </ROOT>
-                </general>
-        </sheets>
+	<meta type="array">
+		<langDisable>1</langDisable>
+	</meta>
+	<sheets>
+		<general>
+			<ROOT type="array">
+				<TCEforms>
+					<sheetTitle>Einstellungen</sheetTitle>
+				</TCEforms>
+				<el type="array">
+					<expand_first type="array">
+						<TCEforms type="array">
+							<label>Erstes Element stadardmäßig öffnen</label>
+							<config type="array">
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array"><numIndex index="0">Geschlossen</numIndex><numIndex index="1">0</numIndex></numIndex>
+									<numIndex index="1" type="array"><numIndex index="0">Offen</numIndex><numIndex index="1">1</numIndex></numIndex>
+								</items>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</expand_first>
+				</el>
+			</ROOT>
+		</general>
+	</sheets>
 </T3DataStructure>
