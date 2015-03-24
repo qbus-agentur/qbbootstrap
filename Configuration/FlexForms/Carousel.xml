@@ -37,6 +37,16 @@
 							</config>
 						</TCEforms>
 					</auto_animation>
+					<css_class>
+						<TCEforms type="array">
+							<label>CSS Klasse</label>
+							<config>
+								<type>input</type>
+								<size>20</size>
+								<eval>trim</eval>
+							</config>
+						</TCEforms>
+					</css_class>
 				</el>
 			</ROOT>
 		</general>

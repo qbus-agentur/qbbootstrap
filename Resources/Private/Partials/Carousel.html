@@ -1,4 +1,4 @@
-<div id="c{data.uid}" class="carousel slide" {f:if(condition: '{data.flexform_auto_animation}', then: ' data-ride="carousel"', else: 'data-interval="false"')}>
+<div id="c{data.uid}" class="carousel slide{f:if(condition: '{data.flexform_css_class}', then: ' {data.flexform_css_class}')}" {f:if(condition: '{data.flexform_auto_animation}', then: ' data-ride="carousel"', else: 'data-interval="false"')}>
 
 	<f:if condition="{data.flexform_indicators}">
 		<ol class="carousel-indicators">
