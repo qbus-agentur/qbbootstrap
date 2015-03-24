@@ -2,8 +2,13 @@ tt_content.qbbootstrap_gallery = COA
 tt_content.qbbootstrap_gallery {
 	10 = < lib.stdheader
 
-	20 = FLUIDTEMPLATE
-	20 {
-		file = EXT:qbbootstrap/Resources/Private/Partials/Gallery.html
+	20 = CASE
+        20 {
+		key.field = layout
+
+		default = FLUIDTEMPLATE
+		default {
+			file = EXT:qbbootstrap/Resources/Private/Partials/Gallery.html
+		}
 	}
 }

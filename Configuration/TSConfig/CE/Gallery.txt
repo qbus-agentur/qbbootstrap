@@ -2,7 +2,7 @@ mod.wizards.newContentElement.wizardItems.common {
 	elements {
 		qbbootstrap_gallery {
 			icon = ../typo3conf/ext/qbbootstrap/Resources/Public/Icons/carousel.png
-			title = Galerie
+			title = Bildergalerie
 			description =
 			tt_content_defValues {
 				CType = qbbootstrap_gallery
@@ -12,4 +12,10 @@ mod.wizards.newContentElement.wizardItems.common {
 	}
 	#show := addToList(qbbootstrap_gallery)
 	show := replaceString(image,|image,qbbootstrap_gallery,)
+}
+
+TCEFORM.tt_content.layout.types {
+	qbbootstrap_gallery {
+		altLabels.0 = Standard Bildergalerie
+	}
 }
