@@ -1,0 +1,25 @@
+tx_gridelements.setup.qbbootstrap_container_75_25 {
+	title = Zweispaltig 75:25
+	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/75-25.png
+
+	config {
+		colCount = 3
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Links
+						colPos = 1
+						colspan = 3
+					}
+					2 {
+						name = Rechts
+						colPos = 2
+					}
+				}
+			}
+		}
+	}
+}
