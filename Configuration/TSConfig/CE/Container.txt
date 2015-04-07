@@ -10,7 +10,7 @@ tx_gridelements.setup.qbbootstrap_container {
 			1 {
 				columns {
 					1 {
-						name = Container
+						name = Container Inhalt
 						colPos = 0
 					}
 				}
