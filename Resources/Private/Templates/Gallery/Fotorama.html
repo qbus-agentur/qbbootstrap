@@ -1,0 +1,23 @@
+{namespace qbtools=Qbus\Qbtools\ViewHelpers}
+
+<qbtools:fal object="{data.uid}" as="images">
+	<div class="qbbootstrap-gallery">
+		<div id="gallery-{data.uid}" class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-auto="false">
+			<f:for each="{images}" as="image" iteration="i">
+			<a href="{f:uri.image(image: image)}"
+				<f:if condition="{i.index} == 0">
+				style="background-image: url('{f:uri.image(image: image)}')"
+				</f:if>
+			>
+					<f:image image="{image}" height="64"/>
+				</a>
+			</f:for>
+		</div>
+
+		<f:if condition="{images.0}">
+		<div class="placeholder">
+			<f:image image="{images.0}" class="img-responsive"/>
+		</div>
+		</f:if>
+	</div>
+</qbtools:fal>

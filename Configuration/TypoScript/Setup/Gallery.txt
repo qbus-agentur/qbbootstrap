@@ -8,7 +8,17 @@ tt_content.qbbootstrap_gallery {
 
 		default = FLUIDTEMPLATE
 		default {
-			file = EXT:qbbootstrap/Resources/Private/Partials/Gallery.html
+			file = EXT:qbbootstrap/Resources/Private/Templates/Gallery/Bootstrap.html
+		}
+
+		1 = FLUIDTEMPLATE
+		1 {
+			file = EXT:qbbootstrap/Resources/Private/Templates/Gallery/Bootstrap.html
+		}
+
+		2 = FLUIDTEMPLATE
+		2 {
+			file = EXT:qbbootstrap/Resources/Private/Templates/Gallery/Fotorama.html
 		}
 	}
 }
