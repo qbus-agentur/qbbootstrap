@@ -1,7 +1,7 @@
 <div role="tabpanel"{f:if(condition: '{data.flexform_css_class}', then: ' class="{data.flexform_css_class}"')}>
 	<ul class="nav {data.flexform_display_type}">
 		<f:for each="{data.tx_gridelements_view_children}" as="tab" iteration="tab_iteration">
-			<li{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-toggle="tab">{tab.header}</a></li>
+			<li role="presentation"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-toggle="tab">{tab.header}</a></li>
 		</f:for>
 	</ul>
 
