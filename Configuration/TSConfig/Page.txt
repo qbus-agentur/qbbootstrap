@@ -8,10 +8,3 @@
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Container-33-66.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Container-66-33.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/CE/Carousel.txt">
-
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/BL/one.txt">
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/BL/one-head.txt">
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/BL/one-head-foot.txt">
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/BL/mid-right.txt">
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/BL/mid-right-head.txt">
-<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TSConfig/BL/mid-right-head-foot.txt">
