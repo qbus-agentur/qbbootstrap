@@ -33,7 +33,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'extbase' => '6.0',
 			'fluid' => '6.0',
 			'typo3' => '6.0',
-			'gridelements' => '3.0',
+			'gridelements' => '3.2.0',
 			'qbtools' => '1.4.0',
 		),
 		'conflicts' => array(
