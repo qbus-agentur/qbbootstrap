@@ -4,15 +4,22 @@
 <f:alias map="{bounds: '{qbtools:calculateBounds(images: images)}'}">
 
 <div class="qbbootstrap-gallery">
+	<f:comment>
+		max-width of #carousel and the padding-top ob qbbootstrap-gallery-spacer span up an implicit height
+		which is the same for all images because .carousel-inner is position absolute (top:0, bottom: 0) and
+		the inner image uses max-height: 100%
+	</f:comment>
+
 	<div id="carousel-{data.uid}" class="carousel slide center-block" data-ride="carousel"
-		style="max-width: {f:cObject(typoscriptObjectPath: 'lib.qbbootstrap.math', data: '{bounds.minHeight} / ({bounds.minRatio} / 100)')}px">
+		style="max-width: {f:cObject(typoscriptObjectPath: 'lib.qbbootstrap.math', data: '{bounds.minHeight} / ({bounds.minRatio} / 100)')}px;
+			max-height: {bounds.minHeight}px">
 
 		<div class="carousel-inner" style="position: absolute; top: 0; bottom: 0;">
 			<f:for each="{images}" as="image" iteration="i">
 				<div class="item{f:if(condition:'{i.index} == 0',then:' active')}" style="height: 100%">
 					<a href="{f:uri.image(image: image)}"{f:if(condition: '{data.image_zoom}', then: ' class="fancybox" rel="rel-{data.uid}"')}>
 						<f:image image="{image}" maxHeight="{bounds.minHeight}" class="center-block"
-							style="width: auto; max-height: 100%;"/>
+							style="max-height: 100%; width: auto;"/>
 					</a>
 				</div>
 			</f:for>
