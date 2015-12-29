@@ -1,8 +1,11 @@
 {namespace qbtools=Qbus\Qbtools\ViewHelpers}
 
 <qbtools:fal object="{data.uid}" as="images">
+<f:alias map="{bounds: '{qbtools:calculateBounds(images: images)}'}">
+
 	<div class="qbbootstrap-gallery">
-		<div id="gallery-{data.uid}" class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-auto="false">
+		<div id="gallery-{data.uid}" class="fotorama" data-nav="thumbs" data-allowfullscreen="true" data-auto="false"
+			data-ratio="{bounds.minRatioWidth}/{bounds.minRatioHeight}" data-width="100%">
 			<f:for each="{images}" as="image" iteration="i">
 			<a href="{f:uri.image(image: image)}"
 				<f:if condition="{i.index} == 0">
@@ -20,4 +23,6 @@
 		</div>
 		</f:if>
 	</div>
+
+</f:alias>
 </qbtools:fal>
