@@ -17,10 +17,18 @@
 		<div class="carousel-inner" style="position: absolute; top: 0; bottom: 0;">
 			<f:for each="{images}" as="image" iteration="i">
 				<div class="item{f:if(condition:'{i.index} == 0',then:' active')}" style="height: 100%">
-					<a href="{f:uri.image(image: image)}"{f:if(condition: '{data.image_zoom}', then: ' class="fancybox" rel="rel-{data.uid}"')}>
-						<f:image image="{image}" maxHeight="{bounds.minHeight}" class="center-block"
-							style="max-height: 100%; width: auto;"/>
-					</a>
+					<f:if condition="{data.image_zoom}">
+						<f:then>
+							<a href="{f:uri.image(image: image)}"{f:if(condition: '{data.image_zoom}', then: ' class="fancybox" rel="rel-{data.uid}"')} title="{image.properties.description}">
+								<f:image image="{image}" maxHeight="{bounds.minHeight}" class="center-block"
+									style="max-height: 100%; width: auto;"/>
+							</a>
+						</f:then>
+						<f:else>
+							<f:image image="{image}" maxHeight="{bounds.minHeight}" class="center-block"
+								style="max-height: 100%; width: auto;"/>
+						</f:else>
+					</f:if>
 				</div>
 			</f:for>
 		</div>
