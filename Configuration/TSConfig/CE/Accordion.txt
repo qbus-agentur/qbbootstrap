@@ -14,7 +14,7 @@ tx_gridelements.setup.qbbootstrap_accordion {
 					1 {
 						name = Accordion Gruppe
 						colPos = 0
-						allowed = textmedia,text,textpic,gridelements_pi1,qbbootstrap_gallery
+						allowed = textmedia,text,textpic,gridelements_pi1,qbbootstrap_gallery,list
 					}
 				}
 			}
