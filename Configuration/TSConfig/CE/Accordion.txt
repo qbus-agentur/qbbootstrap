@@ -1,5 +1,5 @@
 tx_gridelements.setup.qbbootstrap_accordion {
-	title = Accordion
+	title = Accordion Gruppe
 	description =
 	icon = EXT:qbbootstrap/Resources/Public/Icons/accordion.png
 	flexformDS = FILE:EXT:qbbootstrap/Configuration/FlexForms/Accordion.xml
@@ -12,7 +12,7 @@ tx_gridelements.setup.qbbootstrap_accordion {
 			1 {
 				columns {
 					1 {
-						name = Accordion
+						name = Accordion Gruppe
 						colPos = 0
 						allowed = textmedia,text,textpic,gridelements_pi1,qbbootstrap_gallery
 					}
