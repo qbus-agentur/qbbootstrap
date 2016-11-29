@@ -48,6 +48,7 @@ lib.qbbootstrap.math {
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container-50-50.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container-33-33-33.txt">
+<INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container-25-50-25.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container-25-25-25-25.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container-33-66.txt">
 <INCLUDE_TYPOSCRIPT:source="FILE:EXT:qbbootstrap/Configuration/TypoScript/Setup/Container-66-33.txt">
