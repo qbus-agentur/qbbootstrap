@@ -1,0 +1,28 @@
+tx_gridelements.setup.qbbootstrap_container_25_50_25 {
+	title = Dreispaltig 25:50:25
+	description =
+
+	config {
+		colCount = 4
+		rowCount = 1
+		rows {
+			1 {
+				columns {
+					1 {
+						name = Links
+						colPos = 1
+					}
+					2 {
+						name = Mitte
+						colPos = 0
+						colspan = 2
+					}
+					3 {
+						name = Rechts
+						colPos = 2
+					}
+				}
+			}
+		}
+	}
+}
