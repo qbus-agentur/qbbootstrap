@@ -10,8 +10,7 @@ mod.wizards.newContentElement.wizardItems.common {
 			}
 		}
 	}
-	#show := addToList(qbbootstrap_gallery)
-	show := replaceString(image,|image,qbbootstrap_gallery,)
+	show := addToList(qbbootstrap_gallery)
 }
 
 TCEFORM.tt_content.layout.types {
