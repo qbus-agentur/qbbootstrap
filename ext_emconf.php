@@ -15,9 +15,9 @@ $EM_CONF[$_EXTKEY] = array(
     'version' => '1.2.1',
     'constraints' => array(
         'depends' => array(
-            'extbase' => '7.6.0-9.5.99',
-            'fluid' => '7.6.0-9.5.99',
-            'typo3' => '7.6.0-9.5.99',
+            'extbase' => '7.6.0-10.4.99',
+            'fluid' => '7.6.0-10.4.99',
+            'typo3' => '7.6.0-10.4.99',
             'gridelements' => '3.2.0',
             'qbtools' => '1.4.0',
         ),
