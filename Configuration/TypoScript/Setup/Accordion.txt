@@ -32,7 +32,7 @@ tt_content.gridelements_pi1.20.10.setup {
 				30.insertData = 1
 
 				40 = TEXT
-				40.value = <div id="c{field:uid}-body" role="tabpanel" aria-labelledby="c{field:uid}-heading" class="panel-collapse collapse
+				40.value = <div id="c{field:uid}-body" data-parent="#c{field:parentgrid_uid}" role="tabpanel" aria-labelledby="c{field:uid}-heading" class="panel-collapse collapse
 				40.insertData = 1
 
 				50 < lib.get_is_active_gridelement
