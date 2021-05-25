@@ -15,6 +15,7 @@
 							<label>Erstes Element stadardmäßig öffnen</label>
 							<config type="array">
 								<type>select</type>
+								<renderType>selectSingle</renderType>
 								<items type="array">
 									<numIndex index="0" type="array"><numIndex index="0">Geschlossen</numIndex><numIndex index="1">0</numIndex></numIndex>
 									<numIndex index="1" type="array"><numIndex index="0">Offen</numIndex><numIndex index="1">1</numIndex></numIndex>
