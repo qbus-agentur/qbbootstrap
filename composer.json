@@ -24,6 +24,11 @@
 	"qbus/qbtools": ">=1.4.0",
 	"gridelementsteam/gridelements": ">=3.2.0"
     },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "qbbootstrap"
+        }
+    },
     "replace": {
         "typo3-ter/qbbootstrap": "self.version"
     }
