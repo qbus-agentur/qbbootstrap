@@ -16,8 +16,16 @@ tt_content.gridelements_pi1.20.10.setup {
 				10.insertData = 1
 
 				20 = TEXT
-				20.value = <a data-toggle="collapse" data-parent="#c{field:parentgrid_uid}" id="c{field:uid}" href="#c{field:uid}-body" aria-controls="c{field:uid}-body"
+				20.value = <a data-toggle="collapse" id="c{field:uid}" href="#c{field:uid}-body" aria-controls="c{field:uid}-body"
 				20.insertData = 1
+
+				21 = TEXT
+				21.value = data-parent="#c{field:parentgrid_uid}"
+				21.stdWrap.noTrimWrap = | ||
+				21.insertData = 1
+				21.if.negate = 1
+				21.if.value.data = field:parentgrid_flexform_no_group
+				21.if.equals = 1
 
 				22 < lib.get_is_active_gridelement
 				22.value = class="collapsed" aria-expanded="false"

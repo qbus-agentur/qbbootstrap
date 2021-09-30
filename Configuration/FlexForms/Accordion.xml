@@ -24,6 +24,20 @@
 							</config>
 						</TCEforms>
 					</expand_first>
+					<no_group type="array">
+						<TCEforms>
+							<label>Gruppierung deaktivieren (Elemente öffnen und schließen getrennt voneinander)</label>
+							<config>
+								<type>check</type>
+								<items type="array">
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:core/Resources/Private/Language/locallang_core.xlf:labels.enabled</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</no_group>
 				</el>
 			</ROOT>
 		</general>
