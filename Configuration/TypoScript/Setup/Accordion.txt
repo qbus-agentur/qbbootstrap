@@ -24,8 +24,8 @@ tt_content.gridelements_pi1.20.10.setup {
 				21.stdWrap.noTrimWrap = | ||
 				21.insertData = 1
 				21.if.negate = 1
-				21.if.value.data = field:parentgrid_flexform_no_group
-				21.if.equals = 1
+				21.if.value = 1
+				21.if.equals.data = field:parentgrid_flexform_no_group
 
 				22 < lib.get_is_active_gridelement
 				22.value = class="collapsed" aria-expanded="false"
@@ -40,8 +40,20 @@ tt_content.gridelements_pi1.20.10.setup {
 				30.insertData = 1
 
 				40 = TEXT
-				40.value = <div id="c{field:uid}-body" data-parent="#c{field:parentgrid_uid}" role="tabpanel" aria-labelledby="c{field:uid}-heading" class="panel-collapse collapse
+				40.value = <div id="c{field:uid}-body" role="tabpanel" aria-labelledby="c{field:uid}-heading"
 				40.insertData = 1
+
+				41 = TEXT
+				41.value = data-parent="#c{field:parentgrid_uid}"
+				41.stdWrap.noTrimWrap = | ||
+				41.insertData = 1
+				41.if.negate = 1
+				41.if.value = 1
+				41.if.equals.data = field:parentgrid_flexform_no_group
+
+				42 = TEXT
+				42.value = class="panel-collapse collapse
+				42.stdWrap.noTrimWrap = | ||
 
 				50 < lib.get_is_active_gridelement
 				50.value = in
