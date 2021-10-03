@@ -1,0 +1,19 @@
+<div role="tabpanel"{f:if(condition: '{flexFormData.css_class}', then: ' class="{flexFormData.css_class}"')}>
+	<ul class="nav {flexFormData.display_type}">
+		<f:if condition="{children_200}">
+			<f:for each="{children_200}" as="tab" iteration="tab_iteration">
+				<li role="presentation"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-toggle="tab">{tab.header}</a></li>
+			</f:for>
+		</f:if>
+	</ul>
+
+	<div class="tab-content{f:if(condition: '{flexFormData.css_class}', then: ' {flexFormData.css_class}')}">
+		<f:if condition="{children_200}">
+			<f:for each="{children_200}" as="child" iteration="i">
+				<div id="tab-content-{child.uid}" role="tabpanel" class="tab-pane {flexFormData.switch_effect}{f:if(condition: i.isFirst, then: ' active in')}">
+				    <f:format.raw>{child.renderedContent}</f:format.raw>
+				</div>
+			</f:for>
+		</f:if>
+	</div>
+</div>

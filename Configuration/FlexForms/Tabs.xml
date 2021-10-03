@@ -15,6 +15,7 @@
 							<label>Aussehen</label>
 							<config type="array">
 								<type>select</type>
+								<renderType>selectSingle</renderType>
 								<items type="array">
 									<numIndex index="0" type="array"><numIndex index="0">Tabs</numIndex><numIndex index="1">nav-tabs</numIndex></numIndex>
 									<numIndex index="1" type="array"><numIndex index="0">Pills</numIndex><numIndex index="1">nav-pills</numIndex></numIndex>
@@ -28,6 +29,7 @@
 							<label>Switch effekt</label>
 							<config type="array">
 								<type>select</type>
+								<renderType>selectSingle</renderType>
 								<items type="array">
 									<numIndex index="0" type="array"><numIndex index="0">Ohne</numIndex><numIndex index="1"></numIndex></numIndex>
 									<numIndex index="1" type="array"><numIndex index="0">Einblenden</numIndex><numIndex index="1">fade</numIndex></numIndex>

@@ -1,2 +1,11 @@
+tt_content.qbbootstrap-container =< lib.contentElement
+tt_content.qbbootstrap-container {
+  templateName = Container
+  templateRootPaths.10 = EXT:qbbootstrap/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+  }
+}
+
 # Simple container
 tt_content.gridelements_pi1.20.10.setup.qbbootstrap_container < lib.gridelements.defaultGridSetup

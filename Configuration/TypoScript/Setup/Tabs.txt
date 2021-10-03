@@ -1,3 +1,13 @@
+tt_content.qbbootstrap-tabs-container =< lib.contentElement
+tt_content.qbbootstrap-tabs-container {
+  templateName = Tabs
+  templateRootPaths.10 = EXT:qbbootstrap/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+    300 = Qbus\Qbbootstrap\DataProcessing\FlexFormProcessor
+  }
+}
+
 # Hide the default libstdheader for elements that are direct children of
 # a tabs container
 lib.stdheader.stdWrap.if.equals.override.if.value := addToList(qbbootstrap_tabs_container)
