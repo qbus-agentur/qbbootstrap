@@ -1,6 +1,7 @@
 tx_gridelements.setup.qbbootstrap_container_25_50_25 {
 	title = Dreispaltig 25:50:25
 	description =
+	icon = EXT:qbbootstrap/Resources/Public/Icons/25-50-25.png
 
 	config {
 		colCount = 4
