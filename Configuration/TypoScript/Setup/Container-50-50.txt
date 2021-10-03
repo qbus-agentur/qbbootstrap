@@ -1,3 +1,12 @@
+tt_content.qbbootstrap-container-50-50 =< lib.contentElement
+tt_content.qbbootstrap-container-50-50 {
+  templateName = Container5050
+  templateRootPaths.10 = EXT:qbbootstrap/Resources/Private/Templates
+  dataProcessing {
+    200 = B13\Container\DataProcessing\ContainerProcessor
+  }
+}
+
 # two rows 50|50
 tt_content.gridelements_pi1.20.10.setup {
   qbbootstrap_container_50_50 < lib.gridelements.defaultGridSetup

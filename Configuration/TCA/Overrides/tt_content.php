@@ -18,3 +18,263 @@ if (version_compare(TYPO3_branch, '9.5', '<')) {
 
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicon_classes']['qbbootstrap_gallery'] = 'mimetypes-x-content-image';
 $GLOBALS['TCA']['tt_content']['ctrl']['typeicons']['qbbootstrap_gallery'] = 'tt_content_image.gif';
+
+if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container', // CType
+                'Container',
+                'Verwendbar als Rahmen oder als Wrapper für Elemente in Accordions oder Tab-Rastern.',
+                [
+                    [
+                        ['name' => 'Container Inhalt', 'colPos' => 200],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/container.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-50-50', // CType
+                'Zweispaltig 50:50', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Rechts', 'colPos' => 202],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/50-50.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-50-50']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-33-66', // CType
+                'Zweispaltig 33:66', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Rechts', 'colPos' => 202],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/33-66.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-33-66']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-66-33', // CType
+                'Zweispaltig 66:33', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Rechts', 'colPos' => 202],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/66-33.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-66-33']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-75-25', // CType
+                'Zweispaltig 75:25', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Rechts', 'colPos' => 202],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/75-25.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-75-25']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-33-33-33', // CType
+                'Dreispaltig 33:33:33', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Mitte', 'colPos' => 200],
+                        ['name' => 'Rechts', 'colPos' => 202],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/33-33-33.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-33-33-33']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-25-50-25', // CType
+                'Dreispaltig 25:50:25', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Mitte', 'colPos' => 200],
+                        ['name' => 'Rechts', 'colPos' => 202],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/25-50-25.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-25-50-25']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-container-25-25-25-25', // CType
+                'Vierspaltig 25:25:25:25', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Links', 'colPos' => 201],
+                        ['name' => 'Mitte Links', 'colPos' => 202],
+                        ['name' => 'Mitte Rechts', 'colPos' => 203],
+                        ['name' => 'Rechts', 'colPos' => 204],
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/25-25-25-25.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-25-25-25-25']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-accordion', // CType
+                'Accordion Gruppe', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Accordion Gruppe', 'colPos' => 200, 'allowed' => ['CType' => 'textmedia,text,textpic,gridelements_pi1,qbbootstrap_gallery,list']]
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/accordion.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-accordion']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos,pi_flexform';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        '*',
+        'FILE:EXT:qbbootstrap/Configuration/FlexForms/Accordion.xml',
+        'qbbootstrap-accordion',
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-carousel', // CType
+                'Carousel', // label
+                '', // description
+                [
+                    [
+                        ['name' => 'Carousel', 'colPos' => 200, 'allowed' => ['CType' => 'textmedia,text,textpic,gridelements_pi1,qbbootstrap_gallery,list']]
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/carousel.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-carousel']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos,pi_flexform';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        '*',
+        'FILE:EXT:qbbootstrap/Configuration/FlexForms/Carousel.xml',
+        'qbbootstrap-carousel',
+    );
+
+    \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
+        (
+            new \B13\Container\Tca\ContainerConfiguration(
+                'qbbootstrap-tabs-container', // CType
+                'Tabs Container', // label
+                'Ein Element das mehrere Tabs enthält', // description
+                [
+                    [
+                        ['name' => 'Tabs Container', 'colPos' => 200]
+                    ]
+                ] // grid configuration
+            )
+        )
+        // override default configurations
+        ->setIcon('EXT:qbbootstrap/Resources/Public/Icons/tabs.png')
+        ->setSaveAndCloseInNewContentElementWizard(false)
+    );
+
+    // override default settings
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-tabs-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos,pi_flexform';
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
+        '*',
+        'FILE:EXT:qbbootstrap/Configuration/FlexForms/Tabs.xml',
+        'qbbootstrap-tabs-container',
+    );
+}
