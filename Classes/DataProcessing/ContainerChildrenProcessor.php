@@ -24,7 +24,7 @@ use TYPO3\CMS\Core\Database\Query\Restriction\FrontendRestrictionContainer;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
 use TYPO3\CMS\Frontend\Page\PageRepository as FrontendPageRepository;
-use TYPO3\CMS\Core\Domain\Repository\PageRepository
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 
 class ContainerChildrenProcessor implements DataProcessorInterface
 {
