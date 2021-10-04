@@ -11,6 +11,7 @@ tt_content.qbbootstrap-tabs-container {
 # Hide the default libstdheader for elements that are direct children of
 # a tabs container
 lib.stdheader.stdWrap.if.equals.override.if.value := addToList(qbbootstrap_tabs_container)
+lib.contentElement.dataProcessing.1633333000.hideHeadersFor := addToList(qbbootstrap-tabs-container)
 
 # Definition of the Tab Container
 tt_content.gridelements_pi1.20.10.setup.qbbootstrap_tabs_container < lib.gridelements.defaultGridSetup

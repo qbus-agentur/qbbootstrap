@@ -1,10 +1,19 @@
 ### Extension of the header hide toggle ###
+
 # For certian gridelement children we want to hide the default header
 # and render it ourselves.
 # The gridelement that wants to hide the content header can add their
 # backend_layout value to the list by issuing:
+#   lib.contentElement.dataProcessing.1633333000.hideHeadersFor := \
+#      addToList(qbbootstrap_accordion)
 #   lib.stdheader.stdWrap.if.equals.override.if.value := \
 #      addToList(qbbootstrap_accordion)
+lib.contentElement {
+	dataProcessing {
+		1633333000 = Qbus\Qbbootstrap\DataProcessing\ContainerChildrenProcessor
+		1633333000.hideHeadersFor =
+	}
+}
 
 lib.stdheader.stdWrap.if.equals {
 	override = 100
