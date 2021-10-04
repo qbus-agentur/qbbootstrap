@@ -77,7 +77,7 @@ class ContainerChildrenProcessor implements DataProcessorInterface
 
         $row = $queryBuilder->execute()->fetch();
         if ($row) {
-            if (class_exists(PageRepository::class) {
+            if (class_exists(PageRepository::class)) {
                 $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
             } else {
                 /* For <= v9 */
