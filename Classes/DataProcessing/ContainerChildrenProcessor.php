@@ -23,7 +23,8 @@ use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\Restriction\FrontendRestrictionContainer;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-use TYPO3\CMS\Frontend\Page\PageRepository;
+use TYPO3\CMS\Frontend\Page\PageRepository as FrontendPageRepository;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository
 
 class ContainerChildrenProcessor implements DataProcessorInterface
 {
@@ -76,7 +77,13 @@ class ContainerChildrenProcessor implements DataProcessorInterface
 
         $row = $queryBuilder->execute()->fetch();
         if ($row) {
-            $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
+            if (class_exists(PageRepository::class) {
+                $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
+            } else {
+                /* For <= v9 */
+                $pageRepository = GeneralUtility::makeInstance(FrontendPageRepository::class);
+            }
+
             if (method_exists($pageRepository, 'getLanguageOverlay')) {
                 $row = $pageRepository->getLanguageOverlay($table, $row);
             }
