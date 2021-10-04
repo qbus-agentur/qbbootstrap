@@ -12,18 +12,18 @@ $EM_CONF[$_EXTKEY] = array(
     'createDirs' => '',
     'modify_tables' => '',
     'clearCacheOnLoad' => 0,
-    'version' => '1.3.1',
+    'version' => '1.4.0',
     'constraints' => array(
         'depends' => array(
-            'extbase' => '7.6.0-10.4.99',
-            'fluid' => '7.6.0-10.4.99',
-            'typo3' => '7.6.0-10.4.99',
-            'gridelements' => '3.2.0',
+            'typo3' => '7.6.0-11.5.99',
+            'fluid' => '7.6.0-11.5.99',
             'qbtools' => '1.4.0',
         ),
         'conflicts' => array(
         ),
         'suggests' => array(
+            'container' => '1.0.0',
+            'gridelements' => '3.2.0',
         ),
     ),
     'autoload' => array(
