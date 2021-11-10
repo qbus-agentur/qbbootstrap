@@ -1,6 +1,6 @@
 {namespace qbtools=Qbus\Qbtools\ViewHelpers}
 
-<qbtools:fal object="{data.uid}" as="images">
+<qbtools:fal object="{f:if(condition: data._LOCALIZED_UID, then: data._LOCALIZED_UID, else: data.uid)}" as="images">
 <f:alias map="{bounds: '{qbtools:calculateBounds(images: images)}'}">
 
 	<div class="qbbootstrap-gallery">
