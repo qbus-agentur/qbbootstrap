@@ -230,7 +230,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:qbbootstrap/Configuration/FlexForms/Accordion.xml',
-        'qbbootstrap-accordion',
+        'qbbootstrap-accordion'
     );
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
@@ -256,7 +256,7 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:qbbootstrap/Configuration/FlexForms/Carousel.xml',
-        'qbbootstrap-carousel',
+        'qbbootstrap-carousel'
     );
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
@@ -282,6 +282,6 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:qbbootstrap/Configuration/FlexForms/Tabs.xml',
-        'qbbootstrap-tabs-container',
+        'qbbootstrap-tabs-container'
     );
 }
