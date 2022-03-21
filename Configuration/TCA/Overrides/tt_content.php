@@ -47,7 +47,25 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'] = '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    --palette--;;headers,
+                    --palette--;;frames,
+                    --palette--;;appearanceLinks,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ';
+
+
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -69,7 +87,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-50-50']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-50-50']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -91,7 +110,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-33-66']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-33-66']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -113,7 +133,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-66-33']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-66-33']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -135,7 +156,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-75-25']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-75-25']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -158,7 +180,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-33-33-33']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-33-33-33']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -181,7 +204,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-25-50-25']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-25-50-25']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -205,7 +229,8 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-25-25-25-25']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container-25-25-25-25']['showitem'] =
+        $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-container']['showitem'];
 
     \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
         (
@@ -226,7 +251,24 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-accordion']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos,pi_flexform';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-accordion']['showitem'] = '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    --palette--;;headers,
+                    pi_flexform,
+                    --palette--;;frames,
+                    --palette--;;appearanceLinks,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ';
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:qbbootstrap/Configuration/FlexForms/Accordion.xml',
@@ -252,7 +294,24 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-carousel']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos,pi_flexform';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-accordion']['showitem'] = '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    --palette--;;headers,
+                    pi_flexform,
+                    --palette--;;frames,
+                    --palette--;;appearanceLinks,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ';
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:qbbootstrap/Configuration/FlexForms/Carousel.xml',
@@ -278,7 +337,24 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
     );
 
     // override default settings
-    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-tabs-container']['showitem'] = 'sys_language_uid,CType,header,tx_container_parent,colPos,pi_flexform';
+    $GLOBALS['TCA']['tt_content']['types']['qbbootstrap-accordion']['showitem'] = '
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
+                    --palette--;;general,
+                    --palette--;;headers,
+                    pi_flexform,
+                    --palette--;;frames,
+                    --palette--;;appearanceLinks,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
+                    --palette--;;language,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:access,
+                    --palette--;;hidden,
+                    --palette--;;access,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:categories,
+                    categories,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:notes,
+                    rowDescription,
+                --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
+    ';
     \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPiFlexFormValue(
         '*',
         'FILE:EXT:qbbootstrap/Configuration/FlexForms/Tabs.xml',

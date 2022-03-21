@@ -1,5 +1,9 @@
+<f:layout name="Default"/>
+
+<f:section name="Main">
 <f:if condition="{children_200}">
 	<f:for each="{children_200}" as="child">
-	    <f:format.raw>{child.renderedContent}</f:format.raw>
+		<f:format.raw>{child.renderedContent}</f:format.raw>
 	</f:for>
 </f:if>
+</f:section>

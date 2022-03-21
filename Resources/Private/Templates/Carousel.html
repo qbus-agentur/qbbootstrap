@@ -1,3 +1,6 @@
+<f:layout name="Default"/>
+
+<f:section name="Main">
 <f:if condition="{children_200}">
 	<div id="c{data.uid}" class="carousel slide{f:if(condition: '{flexFormData.css_class}', then: ' {flexFormData.css_class}')}" {f:if(condition: '{flexFormData.auto_animation}', then: ' data-ride="carousel"', else: 'data-interval="false"')}>
 
@@ -29,3 +32,4 @@
 
 	</div>
 </f:if>
+</f:section>

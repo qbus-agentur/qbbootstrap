@@ -1,0 +1,71 @@
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container-50-50 {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container-33-66 {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container-75-25 {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container-33-33-33 {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container-25-50-25 {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-container-25-25-25-25 {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-accordion {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}
+
+mod.wizards.newContentElement.wizardItems.container.elements.qbbootstrap-carousel {
+    tt_content_defValues {
+        header_layout = 100
+        frame_class = none
+        sectionIndex = 0
+    }
+}

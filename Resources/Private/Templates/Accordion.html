@@ -1,10 +1,14 @@
-<div class="panel-group qbbootstrap-accordion" id="c{data.uid}" role="tablist" aria-multiselectable="true">
+<f:layout name="Default"/>
+
+<f:section name="Main">
+<f:variable name="bootstrapDataPrefix">{f:if(condition: '{settings.bootstrapVersion} == 5', then: 'bs-')}</f:variable>
+<div class="panel-group qbbootstrap-accordion" role="tablist" aria-multiselectable="true">
 	<f:if condition="{children_200}">
 		<f:for each="{children_200}" as="child" iteration="i">
 			<div class="panel panel-default">
 				<div class="panel-heading" role="tab" id="c{child.uid}-heading">
 					<h4 class="panel-title">
-						<a data-{f:if(condition: '{settings.bootstrapVersion} == 5', then: 'bs-')}toggle="collapse"
+						<a data-{bootstrapDataPrefix}toggle="collapse"
 						   id="c{child.uid}"
 						   href="#c{child.uid}-body"
 						   aria-controls="c{child.uid}-body"
@@ -17,7 +21,7 @@
 				     role="tabpanel"
 				     aria-labelledby="c{child.uid}-heading"
 				     class="panel-collapse collapse{f:if(condition: '{flexFormData.expand_first} && {i.isFirst}', then: ' in')}"
-				     {f:if(condition: '{flexFormData.no_group}', else: 'data-parent="#c{data.uid}"')}
+				     {f:if(condition: '{flexFormData.no_group}', else: 'data-{bootstrapDataPrefix}parent="#c{data.uid}"')}
 				>
 					<div class="panel-body">
 						<f:format.raw>{child.renderedContent}</f:format.raw>
@@ -27,3 +31,4 @@
 		</f:for>
 	</f:if>
 </div>
+</f:section>
