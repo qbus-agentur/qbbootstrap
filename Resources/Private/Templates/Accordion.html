@@ -4,7 +4,7 @@
 			<div class="panel panel-default">
 				<div class="panel-heading" role="tab" id="c{child.uid}-heading">
 					<h4 class="panel-title">
-						<a data-toggle="collapse"
+						<a data-{f:if(condition: '{settings.bootstrapVersion} == 5', then: 'bs-')}toggle="collapse"
 						   id="c{child.uid}"
 						   href="#c{child.uid}-body"
 						   aria-controls="c{child.uid}-body"
