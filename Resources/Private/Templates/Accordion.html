@@ -2,7 +2,7 @@
 
 <f:section name="Main">
 <f:variable name="bootstrapDataPrefix">{f:if(condition: '{settings.bootstrapVersion} == 5', then: 'bs-')}</f:variable>
-<div class="panel-group qbbootstrap-accordion" role="tablist" aria-multiselectable="true">
+<div class="panel-group qbbootstrap-accordion" data-content-element="c{data.uid}" role="tablist" aria-multiselectable="true">
 	<f:if condition="{children_200}">
 		<f:for each="{children_200}" as="child" iteration="i">
 			<div class="panel panel-default">
