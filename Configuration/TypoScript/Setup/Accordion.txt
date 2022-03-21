@@ -1,7 +1,7 @@
 tt_content.qbbootstrap-accordion =< lib.contentElement
 tt_content.qbbootstrap-accordion {
   templateName = Accordion
-  templateRootPaths.10 = EXT:qbbootstrap/Resources/Private/Templates
+  templateRootPaths.5 = EXT:qbbootstrap/Resources/Private/Templates
   settings.bootstrapVersion = {$plugin.tx_qbbootstrap.settings.bootstrapVersion}
   dataProcessing {
     200 = B13\Container\DataProcessing\ContainerProcessor

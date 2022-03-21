@@ -1,7 +1,7 @@
 tt_content.qbbootstrap-container-25-25-25-25 =< lib.contentElement
 tt_content.qbbootstrap-container-25-25-25-25 {
   templateName = Container25252525
-  templateRootPaths.10 = EXT:qbbootstrap/Resources/Private/Templates
+  templateRootPaths.5 = EXT:qbbootstrap/Resources/Private/Templates
   dataProcessing {
     200 = B13\Container\DataProcessing\ContainerProcessor
   }
