@@ -2,6 +2,7 @@ tt_content.qbbootstrap-tabs-container =< lib.contentElement
 tt_content.qbbootstrap-tabs-container {
   templateName = Tabs
   templateRootPaths.10 = EXT:qbbootstrap/Resources/Private/Templates
+  settings.bootstrapVersion = {$plugin.tx_qbbootstrap.settings.bootstrapVersion}
   dataProcessing {
     200 = B13\Container\DataProcessing\ContainerProcessor
     300 = Qbus\Qbbootstrap\DataProcessing\FlexFormProcessor

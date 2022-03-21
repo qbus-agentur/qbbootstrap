@@ -1,11 +1,12 @@
 <f:layout name="Default"/>
 
 <f:section name="Main">
+<f:variable name="bootstrapDataPrefix">{f:if(condition: '{settings.bootstrapVersion} == 5', then: 'bs-')}</f:variable>
 <div role="tabpanel"{f:if(condition: '{flexFormData.css_class}', then: ' class="{flexFormData.css_class}"')}>
 	<ul class="nav {flexFormData.display_type}">
 		<f:if condition="{children_200}">
 			<f:for each="{children_200}" as="tab" iteration="tab_iteration">
-				<li role="presentation"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-toggle="tab">{tab.header}</a></li>
+				<li role="presentation"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-{bootstrapDataPrefix}toggle="tab">{tab.header}</a></li>
 			</f:for>
 		</f:if>
 	</ul>
