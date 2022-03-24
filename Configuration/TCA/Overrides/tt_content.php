@@ -215,10 +215,10 @@ if (\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::isLoaded('container')) {
                 '', // description
                 [
                     [
-                        ['name' => 'Links', 'colPos' => 201],
-                        ['name' => 'Mitte Links', 'colPos' => 202],
-                        ['name' => 'Mitte Rechts', 'colPos' => 203],
-                        ['name' => 'Rechts', 'colPos' => 204],
+                        ['name' => 'Links', 'colPos' => 200],
+                        ['name' => 'Mitte Links', 'colPos' => 201],
+                        ['name' => 'Mitte Rechts', 'colPos' => 202],
+                        ['name' => 'Rechts', 'colPos' => 203],
                     ]
                 ] // grid configuration
             )
