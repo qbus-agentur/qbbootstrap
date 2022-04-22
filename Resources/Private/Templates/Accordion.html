@@ -2,6 +2,7 @@
 
 <f:section name="Main">
 <f:variable name="bootstrapDataPrefix">{f:if(condition: '{settings.bootstrapVersion} == 5', then: 'bs-')}</f:variable>
+<f:variable name="bootstrapShow">{f:if(condition: '{settings.bootstrapVersion} == 5', then: ' show', else: ' in')}</f:variable>
 <div class="panel-group qbbootstrap-accordion" data-content-element="c{data.uid}" role="tablist" aria-multiselectable="true">
 	<f:if condition="{children_200}">
 		<f:for each="{children_200}" as="child" iteration="i">
@@ -20,7 +21,7 @@
 				<div id="c{child.uid}-body"
 				     role="tabpanel"
 				     aria-labelledby="c{child.uid}-heading"
-				     class="panel-collapse collapse{f:if(condition: '{flexFormData.expand_first} && {i.isFirst}', then: ' in')}"
+				     class="panel-collapse collapse{f:if(condition: '{flexFormData.expand_first} && {i.isFirst}', then: bootstrapShow)}"
 				     {f:if(condition: '{flexFormData.no_group}', else: 'data-{bootstrapDataPrefix}parent="#c{data.uid}"')}
 				>
 					<div class="panel-body">
