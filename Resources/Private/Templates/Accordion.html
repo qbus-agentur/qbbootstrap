@@ -15,7 +15,7 @@
 						   aria-controls="c{child.uid}-body"
 						   {f:if(condition: '{flexFormData.expand_first} && {i.isFirst}', else: 'class="collapsed" aria-expanded="false"')}
 						   {f:if(condition: '{flexFormData.no_group}', else: 'data-parent="#c{data.uid}"')}
-						>{child.header}</a>
+						>{child.header}<f:if condition="{child.subheader}"> <small>{child.subheader}</small></f:if></a>
 					</h4>
 				</div>
 				<div id="c{child.uid}-body"
