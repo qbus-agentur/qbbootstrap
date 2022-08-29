@@ -1,7 +1,9 @@
 mod.wizards.newContentElement.wizardItems.common {
 	elements {
 		qbbootstrap_gallery {
+			iconIdentifier = qbbootstrap-gallery
 			icon = ../typo3conf/ext/qbbootstrap/Resources/Public/Icons/carousel.png
+
 			title = Bildergalerie
 			description =
 			tt_content_defValues {
