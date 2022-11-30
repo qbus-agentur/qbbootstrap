@@ -6,7 +6,14 @@
 	<ul class="nav {flexFormData.display_type}">
 		<f:if condition="{children_200}">
 			<f:for each="{children_200}" as="tab" iteration="tab_iteration">
-				<li role="presentation"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-{bootstrapDataPrefix}toggle="tab">{tab.header}</a></li>
+				<f:if condition="{settings.bootstrapVersion} == 5">
+					<f:then>
+						<li role="presentation"><a href="#tab-content-{tab.uid}" data-{bootstrapDataPrefix}toggle="tab"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}>{tab.header}</a></li>
+					</f:then>
+					<f:else>
+						<li role="presentation"{f:if(condition:'{tab_iteration.isFirst}',then:' class="active"')}><a href="#tab-content-{tab.uid}" data-{bootstrapDataPrefix}toggle="tab">{tab.header}</a></li>
+					</f:else>
+				</f:if>
 			</f:for>
 		</f:if>
 	</ul>
