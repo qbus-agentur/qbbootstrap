@@ -57,12 +57,13 @@ class ContainerChildrenProcessor implements DataProcessorInterface
 
         $whereConditions = [];
 
-        $languageField = $GLOBALS['TCA'][$table]['ctrl']['languageField'] ?? null;
-        if ($languageField !== null) {
-            $whereConditions[] = $queryBuilder->expr()->in('sys_language_uid', $queryBuilder->createNamedParameter([0, -1], Connection::PARAM_INT_ARRAY));
-        }
-
         $whereConditions[] = $queryBuilder->expr()->eq('uid',  $queryBuilder->createNamedParameter($parent, \PDO::PARAM_INT));
+
+        // Disabled: Doesn't work for copy-mode relations where parent-element is sys_language_uid > 0
+        //$languageField = $GLOBALS['TCA'][$table]['ctrl']['languageField'] ?? null;
+        //if ($languageField !== null) {
+        //    $whereConditions[] = $queryBuilder->expr()->in('sys_language_uid', $queryBuilder->createNamedParameter([0, -1], Connection::PARAM_INT_ARRAY));
+        //}
 
         // test if this would be safe in case of language or workspace overlays, probably not if CType is changed
         //$whereConditions[] = $queryBuilder->expr()->in('CType', $queryBuilder->createNamedParameter($ctypes, \PDO::PARAM_STR_ARRAY));
