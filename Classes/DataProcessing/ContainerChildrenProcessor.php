@@ -17,14 +17,12 @@ namespace Qbus\Qbbootstrap\DataProcessing;
  * The TYPO3 project - inspiring people to share!
  */
 
-use TYPO3\CMS\Core\Utility\GeneralUtility;
-use TYPO3\CMS\Core\Database\Connection;
 use TYPO3\CMS\Core\Database\ConnectionPool;
 use TYPO3\CMS\Core\Database\Query\Restriction\FrontendRestrictionContainer;
+use TYPO3\CMS\Core\Domain\Repository\PageRepository;
+use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Frontend\ContentObject\ContentObjectRenderer;
 use TYPO3\CMS\Frontend\ContentObject\DataProcessorInterface;
-use TYPO3\CMS\Frontend\Page\PageRepository as FrontendPageRepository;
-use TYPO3\CMS\Core\Domain\Repository\PageRepository;
 
 class ContainerChildrenProcessor implements DataProcessorInterface
 {
@@ -41,7 +39,6 @@ class ContainerChildrenProcessor implements DataProcessorInterface
         array $processorConfiguration,
         array $processedData
     ): array {
-
         if (!isset($processedData['data']['tx_container_parent'])) {
             return $processedData;
         }
@@ -49,7 +46,7 @@ class ContainerChildrenProcessor implements DataProcessorInterface
         $parent = (int)$processedData['data']['tx_container_parent'];
 
         $ctypes = $cObj->stdWrapValue('hideHeadersFor', $processorConfiguration, '');
-	$ctypes = GeneralUtility::trimExplode(',', $ctypes, true);
+        $ctypes = GeneralUtility::trimExplode(',', $ctypes, true);
 
         $table = 'tt_content';
         $queryBuilder = GeneralUtility::makeInstance(ConnectionPool::class)->getQueryBuilderForTable($table);
@@ -57,7 +54,7 @@ class ContainerChildrenProcessor implements DataProcessorInterface
 
         $whereConditions = [];
 
-        $whereConditions[] = $queryBuilder->expr()->eq('uid',  $queryBuilder->createNamedParameter($parent, \PDO::PARAM_INT));
+        $whereConditions[] = $queryBuilder->expr()->eq('uid', $queryBuilder->createNamedParameter($parent, \PDO::PARAM_INT));
 
         // Disabled: Doesn't work for copy-mode relations where parent-element is sys_language_uid > 0
         //$languageField = $GLOBALS['TCA'][$table]['ctrl']['languageField'] ?? null;
@@ -78,16 +75,8 @@ class ContainerChildrenProcessor implements DataProcessorInterface
 
         $row = $queryBuilder->execute()->fetch();
         if ($row) {
-            if (class_exists(PageRepository::class)) {
-                $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
-            } else {
-                /* For <= v9 */
-                $pageRepository = GeneralUtility::makeInstance(FrontendPageRepository::class);
-            }
-
-            if (method_exists($pageRepository, 'getLanguageOverlay')) {
-                $row = $pageRepository->getLanguageOverlay($table, $row);
-            }
+            $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
+            $row = $pageRepository->getLanguageOverlay($table, $row);
 
             if (in_array($row['CType'], $ctypes, true)) {
                 $processedData['data']['header_layout'] = '100';
