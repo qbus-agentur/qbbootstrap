@@ -73,7 +73,7 @@ class ContainerChildrenProcessor implements DataProcessorInterface
             )
             ->setMaxResults(1);
 
-        $row = $queryBuilder->execute()->fetch();
+        $row = $queryBuilder->executeQuery()->fetchAssociative();
         if ($row) {
             $pageRepository = GeneralUtility::makeInstance(PageRepository::class);
             $row = $pageRepository->getLanguageOverlay($table, $row);
