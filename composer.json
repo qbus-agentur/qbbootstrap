@@ -21,7 +21,7 @@
     "license": "GPL-2.0+",
     "require": {
         "typo3/cms-core": "^12.4",
-        "qbus/qbtools": "@dev",
+        "qbus/qbtools": "^4.0",
         "b13/container": "^2.2"
     },
     "suggests": {
