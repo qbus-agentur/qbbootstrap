@@ -69,7 +69,7 @@ class ContainerChildrenProcessor implements DataProcessorInterface
             ->select('uid', 'CType')
             ->from($table)
             ->where(
-                $queryBuilder->expr()->andX(...$whereConditions)
+                $queryBuilder->expr()->and(...$whereConditions)
             )
             ->setMaxResults(1);
 
