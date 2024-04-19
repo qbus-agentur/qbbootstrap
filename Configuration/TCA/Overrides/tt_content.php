@@ -5,9 +5,9 @@ if (!defined('TYPO3')) {
 }
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem('tt_content', 'CType', [
-    'Bildergalerie',
-    'qbbootstrap_gallery',
-    'content-image',
+    'label' => 'Bildergalerie',
+    'value' => 'qbbootstrap_gallery',
+    'icon' => 'content-image',
 ], 'textpic', 'after');
 
 $GLOBALS['TCA']['tt_content']['types']['qbbootstrap_gallery']['showitem'] = str_replace(
